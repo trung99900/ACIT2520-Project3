@@ -1,5 +1,6 @@
 let database = require("../database");
 
+//Change lines so that Cindy is not hardcoded 
 let remindersController = {
   list: (req, res) => {
     res.render("reminder/index", { reminders: database.cindy.reminders });
@@ -40,8 +41,13 @@ let remindersController = {
     res.render("reminder/edit", { reminderItem: searchResult });
   },
 
-  update: (req, res) => {
+  update: (req, res) => { 
     // implementation here 👈
+    let index = database.cindy.reminders.findIndex(reminder => reminder.id == req.params.id);
+    database.cindy.reminders[index].title = req.body.title;
+    database.cindy.reminders[index].description = req.body.description;
+    database.cindy.reminders[index].completed = req.body.completed === "true" ? true : false;
+    res.redirect("/reminders");
   },
 
   delete: (req, res) => {
