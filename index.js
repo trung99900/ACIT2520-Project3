@@ -1,20 +1,32 @@
 // This is the second test - Trung
+const passport = require("./middleware/passport");
+const session = require("express-session");
 const express = require("express");
 const app = express();
 const path = require("path");
 const ejsLayouts = require("express-ejs-layouts");
 const reminderController = require("./controller/reminder_controller");
 const authController = require("./controller/auth_controller");
+const userController = require('./controller/userController');
+
 //TEST EDUARDO
 app.use(express.static(path.join(__dirname, "public")));
-
 app.use(express.urlencoded({ extended: false }));
+app.use(session({ 
+  secret: "123456cat",
+  resave: false,
+  saveUninitialized: true
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use(ejsLayouts);
 
 app.set("view engine", "ejs");
 
 // Routes start here
+
 app.get("/reminders", reminderController.list);
 app.get("/reminder/new", reminderController.new);
 app.get("/reminder/:id", reminderController.listOne);

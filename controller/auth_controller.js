@@ -1,3 +1,6 @@
+const express = require("express");
+const passport = require("../middleware/passport");
+
 let database = require("../database");
 
 let authController = {
