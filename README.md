@@ -13,3 +13,7 @@ Trung Nguyen:
 3. Downloaded the starter code from learning hub
 4. Integrated Passport Authentication (used the passport.js starter code provided by teacher in learning hub) into our project. - This task is responsible User Authentication functionality.
 5. Modified the Passport Authentication function to be able to show the reminders of the logged in user, not Cindy
+6. Updated our database structure to include a userId
+7. Updated the reminderController methods to filter reminders based on the userId. We can access the logged-in user's ID through req.user.id by using passport for authentication
+8. Updated the authController to include login functionality.
+9. Created a new route that accepts a userId parameterFor for the admin to remotely destroy a session. 
