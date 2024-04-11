@@ -17,3 +17,7 @@ Trung Nguyen:
 7. Updated the reminderController methods to filter reminders based on the userId. We can access the logged-in user's ID through req.user.id by using passport for authentication
 8. Updated the authController to include login functionality.
 9. Created a new route that accepts a userId parameterFor for the admin to remotely destroy a session. 
+
+Eduardo:
+- I worked on the following tasks:
+1. Added update and delete functions in reminder_controller. Remember to change them when changing the code to use a login method!
