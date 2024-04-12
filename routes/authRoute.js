@@ -19,17 +19,26 @@ router.post(
       res.redirect("/admin");
     }
     else {
+      // console.log(req.user);
       res.redirect("/reminder");
     }
   }
 );
 
 router.get("/logout", (req, res) => {
-  req.logout((err) => {
+  // console.log(req.sessionID);
+  // req.logout((err) => {
+  //   if (err) {
+  //     return res.send("Error logging out");
+  //   }
+  // });
+  req.sessionStore.destroy(req.sessionID, (err) => {
     if (err) {
-      return res.send("Error logging out");
+      console.log(err);
+      return res.redirect('/reminder');
     }
   });
+    
   res.redirect("/auth/login");
 });
 
@@ -37,6 +46,7 @@ router.get('/github/callback',
   passport.authenticate('github', { failureRedirect: '/auth/login' }),
   function(req, res) {
     // Successful authentication, redirect home.
+    // console.log(req.user);
     res.redirect('/reminder');
   }
 );
