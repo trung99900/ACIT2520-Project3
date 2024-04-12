@@ -1,4 +1,4 @@
-# Fully Functional Reminder App
+# Fully Functional Remaider App
 
 ## Requirement
 Create a `.env` file inside `models` folder \
