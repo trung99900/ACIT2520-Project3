@@ -1,4 +1,4 @@
-# Fully Functional Remaider App
+# Fully Functional Reminder App
 
 ## Requirement
 Create a `.env` file inside `models` folder \
@@ -81,4 +81,4 @@ That is the request-respond cycle. The entire server.js file isnt running repeat
 - Get the banner image task done.
 - Successfully add the register function
 - Successfully add the reset password function
-- Fix logout bug.
+- Fix logout bug
