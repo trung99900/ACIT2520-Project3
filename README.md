@@ -1,3 +1,13 @@
+# Fully Functional Remaider App
+
+## Requirement
+Create a `.env` file inside `models` folder \
+Save your GitHub id and GitHub secret by this template 
+```
+GITHUB_CLIENT_ID="Your ID"
+GITHUB_CLIENT_SECRET="Your Secret"
+```
+
 ## Breakdown of work:
 
 ### Ghiervis Tuazon:
