@@ -31,6 +31,13 @@ GITHUB_CLIENT_SECRET="Your Secret"
 ### Eduardo:
 - I worked on the following tasks:
 1. Added update and delete functions in reminder_controller. Remember to change them when changing the code to use a login method!
+2. Tried to integrate passport login.
+3. Watched video lectures on passport.
+4. Confirmed that the team's implementation of passport works.
+5. Started bugtesting on the final code.
+6. Identified and isolated a bug that caused the application to crash when opening the login screen in one window without logging in, followed by trying to login as admin in another window.
+7. Finished bugtesting and notified the team about the issue.
+8. Redid bugtesting after the fix and confirmed that the issue was fixed.
 
 ### Tuan Nguyen:
 #### 4/2/2024
