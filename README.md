@@ -34,10 +34,12 @@ GITHUB_CLIENT_SECRET="Your Secret"
 2. Tried to integrate passport login.
 3. Watched video lectures on passport.
 4. Confirmed that the team's implementation of passport works.
-5. Started bugtesting on the final code.
-6. Identified and isolated a bug that caused the application to crash when opening the login screen in one window without logging in, followed by trying to login as admin in another window.
-7. Finished bugtesting and notified the team about the issue.
-8. Redid bugtesting after the fix and confirmed that the issue was fixed.
+5. Started bug testing on the final code.
+6. Identified and isolated two bugs that caused the application to crash:
+    - Opening the login screen in one window without logging in, followed by trying to login as admin in another window.
+    - Typing something that gives 0 image results in the Banner Image field when creating a reminder, or leaving it blank.
+7. Notified the team about the issues and fixed the Banner Image issue by adding a default image.
+8. Redid bug testing after the login issue was fixed and confirmed that it worked.
 
 ### Tuan Nguyen:
 #### 4/2/2024

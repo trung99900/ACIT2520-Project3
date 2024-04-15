@@ -6,6 +6,10 @@ async function getImage(banner) {
   const url = `https://api.unsplash.com/search/collections?page=1&query=${banner}&client_id=zkvw9k628OwqRmsBuDaupUsR6zeUhtwB4CfGM6pRa2U`
   const res = await fetch(url)
   const data = await res.json()
+  if (data.total === 0) {
+    // Default image for when there are no image results or Banner Image field is empty
+    return "https://images.unsplash.com/photo-1588421357574-87938a86fa28"
+  }
   return data.results[Math.floor(Math.random() * 10)].cover_photo.urls.regular
 }
 
