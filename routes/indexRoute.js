@@ -30,6 +30,7 @@ router.get("/admin", ensureAuthenticated, (req, res) => {
 
     let sessionList = [];
     for (let key in sessions) {
+      if (sessions[key].passport == undefined) continue
       if (req.user.id != sessions[key].passport.user) {
         sessionList.push({"SessionID":key, "UserID":sessions[key].passport.user})
       }
